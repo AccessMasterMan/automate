@@ -1,0 +1,73 @@
+{
+    "video_title": "Top 10 Cities to Travel in the World",
+    "video_length": "1 minute",
+    "background_music": "Upbeat, adventurous instrumental music",
+    "narration_tone": "Exciting, energetic, and inspirational",
+    "visual_style": "Real-life footage with dynamic transitions and a minimalistic approach",
+    "parts": [
+      {
+        "text_data": "First up, Paris! Home to the Eiffel Tower, art, culture, and amazing food.",
+        "video_keywords": ["Paris", "Eiffel Tower", "culture"],
+        "visual_cue": "Aerial view of Paris, with the Eiffel Tower and bustling streets.",
+        "text_overlay": "Paris",
+        "transition": "fade"
+      },
+      {
+        "text_data": "Next, Tokyo – a mix of high-tech innovation and timeless tradition.",
+        "video_keywords": ["Tokyo", "technology", "tradition"],
+        "visual_cue": "Tokyo streets with neon lights and peaceful temples.",
+        "transition": "slide"
+      },
+      {
+        "text_data": "Rome offers ancient wonders like the Colosseum and rich history everywhere you turn.",
+        "video_keywords": ["Rome", "Colosseum", "history"],
+        "visual_cue": "Footage of the Colosseum and Roman ruins.",
+        "transition": "zoom"
+      },
+      {
+        "text_data": "New York City is the city that never sleeps, with iconic landmarks and vibrant culture.",
+        "video_keywords": ["New York", "Times Square", "Central Park"],
+        "visual_cue": "Timelapse of Times Square, then Central Park.",
+        "transition": "crossfade"
+      },
+      {
+        "text_data": "Sydney offers stunning beaches and the iconic Opera House.",
+        "video_keywords": ["Sydney", "beaches", "Opera House"],
+        "visual_cue": "Wide shot of Sydney's coastline with the Opera House.",
+        "transition": "slide"
+      },
+      {
+        "text_data": "Cape Town in South Africa has breathtaking views of Table Mountain.",
+        "video_keywords": ["Cape Town", "Table Mountain", "nature"],
+        "visual_cue": "Aerial view of Table Mountain with city and ocean in the background.",
+        "transition": "fade"
+      },
+      {
+        "text_data": "London is packed with history, from Big Ben to the Tower of London.",
+        "video_keywords": ["London", "Big Ben", "history"],
+        "visual_cue": "Footage of Big Ben, then a quick shot of the Tower of London.",
+        "transition": "zoom"
+      },
+      {
+        "text_data": "Barcelona offers a mix of Gaudi architecture and sunny beaches.",
+        "video_keywords": ["Barcelona", "Gaudi", "beaches"],
+        "visual_cue": "Sagrada Familia followed by shots of beach scenes.",
+        "transition": "slide"
+      },
+      {
+        "text_data": "Dubai is all about luxury, from the Burj Khalifa to desert safaris.",
+        "video_keywords": ["Dubai", "luxury", "Burj Khalifa"],
+        "visual_cue": "Stunning views of the Burj Khalifa and a thrilling desert safari.",
+        "transition": "crossfade"
+      },
+      {
+        "text_data": "Finally, Istanbul blends East and West with vibrant markets and mosques.",
+        "video_keywords": ["Istanbul", "East and West", "markets"],
+        "visual_cue": "Footage of the Hagia Sophia and lively markets.",
+        "transition": "fade",
+        "cta": "Comment below with your favorite city!"
+      }
+    ],
+    "video_tags": ["travel", "top cities", "world destinations"]
+  }
+  

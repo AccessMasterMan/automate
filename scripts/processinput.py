@@ -76,8 +76,6 @@ def process_user_input(title, script_type, additional_notes, duration_minutes, t
     Call to action (cta) can be used in any part, not just at the end of the video but shouldn't be too many.
     """
 
-    print(text_prompt)
-
     print("\nSimulating OpenAI API Request...")
     for _ in tqdm(range(10), desc="Generating AI Script", unit="step"):
         time.sleep(0.3)  # Simulate script generation time
@@ -89,3 +87,4 @@ def process_user_input(title, script_type, additional_notes, duration_minutes, t
     print(f"Additional Notes: {additional_notes}")
     print(f"Duration: {duration_minutes} minutes")
     print(f"Tags for this video: {tags}")
+

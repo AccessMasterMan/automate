@@ -1,0 +1,56 @@
+{
+    "audio_analysis": {
+        "parts": [
+            {
+                "audio_index": 1,
+                "parts": [
+                    {
+                        "part_index": 1,
+                        "keywords": [
+                            {
+                                "keyword": "Paris",
+                                "start_time": 0.0,
+                                "end_time": 2.016
+                            },
+                            {
+                                "keyword": "Eiffel Tower",
+                                "start_time": 2.016,
+                                "end_time": 3.568
+                            },
+                            {
+                                "keyword": "culture",
+                                "start_time": 3.568,
+                                "end_time": 5.433438
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "audio_index": 2,
+                "parts": [
+                    {
+                        "part_index": 2,
+                        "keywords": [
+                            {
+                                "keyword": "Istanbul",
+                                "start_time": 0.0,
+                                "end_time": 2.133
+                            },
+                            {
+                                "keyword": "East and West",
+                                "start_time": 2.133,
+                                "end_time": 4.267
+                            },
+                            {
+                                "keyword": "markets",
+                                "start_time": 4.267,
+                                "end_time": 6.4
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

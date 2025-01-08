@@ -2,8 +2,16 @@ import os
 import time
 from tqdm import tqdm
 
-from scripts.getinput import get_user_input;
-from scripts.processinput import process_user_input;
+from scripts.getinput import get_user_input
+from scripts.processinput import process_user_input
+from scripts.processaudio import process_audio
+from scripts.processvideo import process_video_parts
+from scripts.resizeclips import process_videos_for_youtube
+from scripts.speechanalysis import analyze_speech_with_assemblyai
+from scripts.analysisfix import fix_analysis_timestamps;
+
+# Declare project_name as a global variable
+project_name = ""
 
 def display_welcome_screen():
     terminal_art = r"""
@@ -20,6 +28,7 @@ def display_welcome_screen():
     print(terminal_art)
 
 def create_project():
+    global project_name  # Declare global variable
     print("Welcome to the Project Generator!")
 
     # Step 1: Ask for the project name
@@ -56,6 +65,7 @@ def cancel_project():
     time.sleep(1)
 
 def show_menu():
+    global project_name  # Declare global variable
     while True:
         display_welcome_screen()
         print("\nMenu:")
@@ -66,9 +76,15 @@ def show_menu():
         
         if choice == "1":
             create_project()
-            title, script_type, additional_notes, duration_minutes, tags = get_user_input()
-            process_user_input(title, script_type, additional_notes, duration_minutes, tags)
-
+            if project_name:  # Only proceed if project_name is set
+                title, script_type, additional_notes, duration_minutes, tags = get_user_input()
+                process_user_input(title, script_type, additional_notes, duration_minutes, tags)
+                #process_audio(project_name)
+                #process_video_parts(project_name)
+                #process_videos_for_youtube(project_name)
+                #analyze_speech_with_assemblyai(project_name)
+                fix_analysis_timestamps(project_name)
+               
             
         elif choice == "2":
             cancel_project()

@@ -58,3 +58,6 @@ def save_storyline(storyline, output_path="output/storyline.txt"):
     with open(output_path, "w") as file:
         file.write(storyline)
     print(f"Storyline successfully saved to {output_path}.")
+
+#we're going to write a function which opens up the data page in the project and creates a new 
+#json file with engine.json as the name; 

@@ -1,0 +1,25 @@
+{
+    "video_title": "Top 10 Cities to Travel in the World",
+    "video_length": "1 minute",
+    "background_music": "Upbeat, adventurous instrumental music",
+    "narration_tone": "Exciting, energetic, and inspirational",
+    "visual_style": "Real-life footage with dynamic transitions and a minimalistic approach",
+    "parts": [
+      {
+        "text_data": "First up, Paris! Home to the Eiffel Tower, art, culture, and amazing food.",
+        "video_keywords": ["Paris", "Eiffel Tower", "culture"],
+        "visual_cue": "Aerial view of Paris, with the Eiffel Tower and bustling streets.",
+        "text_overlay": "Paris",
+        "transition": "fade"
+      },
+      {
+        "text_data": "Finally, Istanbul blends East and West with vibrant markets and mosques.",
+        "video_keywords": ["Istanbul", "East and West", "markets"],
+        "visual_cue": "Footage of the Hagia Sophia and lively markets.",
+        "transition": "fade",
+        "cta": "Comment below with your favorite city!"
+      }
+    ],
+    "video_tags": ["travel", "top cities", "world destinations"]
+  }
+  

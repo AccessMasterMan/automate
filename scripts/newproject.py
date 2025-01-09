@@ -13,6 +13,7 @@ from scripts.assemblyvideo import assemble_videos_with_transitions
 from scripts.addaudio import merge_audio_with_video
 from scripts.addoverlaytext import process_videos_with_overlay
 from scripts.combineall import combine_final_clips
+from scripts.addbgm import add_background_music;
 
 # Declare project_name as a global variable
 project_name = ""
@@ -85,15 +86,16 @@ def show_menu():
             if project_name:  # Only proceed if project_name is set
                 title, script_type, additional_notes, duration_minutes, tags = get_user_input()
                 process_user_input(title, script_type, additional_notes, duration_minutes, tags)
-                #process_audio(project_name)
-                #process_video_parts(project_name)
-                #process_videos_for_youtube(project_name)
-                #analyze_speech_with_assemblyai(project_name)
-                #fix_analysis_timestamps(project_name)
-                #assemble_videos_with_transitions(project_name)
-                #merge_audio_with_video(project_name)
-                #process_videos_with_overlay(project_name)
+                process_audio(project_name)
+                process_video_parts(project_name)
+                process_videos_for_youtube(project_name)
+                analyze_speech_with_assemblyai(project_name)
+                fix_analysis_timestamps(project_name)
+                assemble_videos_with_transitions(project_name)
+                merge_audio_with_video(project_name)
+                process_videos_with_overlay(project_name)
                 combine_final_clips(project_name)
+                add_background_music(project_name)
                 
               
             

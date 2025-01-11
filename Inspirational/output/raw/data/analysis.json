@@ -1,0 +1,131 @@
+{
+    "audio_analysis": {
+        "parts": [
+            {
+                "audio_index": 1,
+                "parts": [
+                    {
+                        "part_index": 1,
+                        "keywords": [
+                            {
+                                "keyword": "self-improvement",
+                                "start_time": 0.0,
+                                "end_time": 3.309
+                            },
+                            {
+                                "keyword": "motivation",
+                                "start_time": 3.309,
+                                "end_time": 6.618
+                            },
+                            {
+                                "keyword": "2025 goals",
+                                "start_time": 6.618,
+                                "end_time": 9.927
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "audio_index": 2,
+                "parts": [
+                    {
+                        "part_index": 2,
+                        "keywords": [
+                            {
+                                "keyword": "self-doubt",
+                                "start_time": 0.0,
+                                "end_time": 2.377
+                            },
+                            {
+                                "keyword": "confidence",
+                                "start_time": 2.377,
+                                "end_time": 4.754
+                            },
+                            {
+                                "keyword": "potential",
+                                "start_time": 4.754,
+                                "end_time": 7.131
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "audio_index": 3,
+                "parts": [
+                    {
+                        "part_index": 3,
+                        "keywords": [
+                            {
+                                "keyword": "procrastination",
+                                "start_time": 0.0,
+                                "end_time": 3.683
+                            },
+                            {
+                                "keyword": "time management",
+                                "start_time": 3.683,
+                                "end_time": 7.366
+                            },
+                            {
+                                "keyword": "action",
+                                "start_time": 7.366,
+                                "end_time": 11.05
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "audio_index": 4,
+                "parts": [
+                    {
+                        "part_index": 4,
+                        "keywords": [
+                            {
+                                "keyword": "comparison",
+                                "start_time": 0.0,
+                                "end_time": 2.873
+                            },
+                            {
+                                "keyword": "self-growth",
+                                "start_time": 2.873,
+                                "end_time": 5.747
+                            },
+                            {
+                                "keyword": "unique journey",
+                                "start_time": 5.747,
+                                "end_time": 8.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "audio_index": 5,
+                "parts": [
+                    {
+                        "part_index": 5,
+                        "keywords": [
+                            {
+                                "keyword": "health",
+                                "start_time": 0.0,
+                                "end_time": 2.647
+                            },
+                            {
+                                "keyword": "wellness",
+                                "start_time": 2.647,
+                                "end_time": 5.294
+                            },
+                            {
+                                "keyword": "self-care",
+                                "start_time": 5.294,
+                                "end_time": 7.941
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

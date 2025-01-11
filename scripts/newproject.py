@@ -84,21 +84,20 @@ def show_menu():
         if choice == "1":
             create_project()
             if project_name:  # Only proceed if project_name is set
-                title, script_type, additional_notes, duration_minutes, tags = get_user_input()
-                process_user_input(title, script_type, additional_notes, duration_minutes, tags)
-                process_audio(project_name)
-                process_video_parts(project_name)
-                process_videos_for_youtube(project_name)
-                analyze_speech_with_assemblyai(project_name)
-                fix_analysis_timestamps(project_name)
-                assemble_videos_with_transitions(project_name)
+                #title, script_type, additional_notes, duration_minutes, tags = get_user_input()
+                #process_user_input(title, script_type, additional_notes, duration_minutes, tags)
+                #input("Press Enter to continue...")
+                #process_audio(project_name)
+                #process_video_parts(project_name)
+                #process_videos_for_youtube(project_name)
+                #analyze_speech_with_assemblyai(project_name)
+                #fix_analysis_timestamps(project_name)
+                #assemble_videos_with_transitions(project_name)
                 merge_audio_with_video(project_name)
                 process_videos_with_overlay(project_name)
                 combine_final_clips(project_name)
                 add_background_music(project_name)
                 
-              
-            
         elif choice == "2":
             cancel_project()
             break

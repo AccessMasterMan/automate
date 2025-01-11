@@ -91,7 +91,7 @@ def process_videos_with_overlay(project_name):
                 print(f"Debug: Video file not found at {video_file}")
                 raise FileNotFoundError(f"Video file {video_file} not found.")
 
-            overlay_text = part.get("text_overlay", "No overlay text provided")
+            overlay_text = part.get("text_overlay", "")
             print(f"Debug: Processing video: {video_file}, overlay_text='{overlay_text}'")
             final_video = add_overlay_text_to_video(video_file, overlay_text, text_duration=3.5)
 

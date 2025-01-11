@@ -50,10 +50,11 @@ def merge_audio_with_video(project_name):
         # Adjust the video duration to match the audio
         if video_clip.duration < audio_duration:
             # Loop the video to match the audio duration
-            video_clip = Loop(video_clip, duration=audio_duration)
+            video_clip = Loop(duration=audio_duration).apply(video_clip)
+
         elif video_clip.duration > audio_duration:
             # Trim the video to match the audio duration
-            video_clip = video_clip.subclip(0, audio_duration)
+            video_clip = video_clip.subclipped(0, audio_duration)
 
         # Set the audio to the video
         video_with_audio = video_clip.with_audio(audio_clip)

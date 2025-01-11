@@ -16,7 +16,7 @@ def process_user_input(title, script_type, additional_notes, duration_minutes, t
 
 
     text_data: The story or content (divided into segements).
-    video_keywords: A list of 2 or 3 relevant keywords for each part. Ensure the keywords are distinct and not overly repetitive.
+    video_keywords: A list of minimum of 2 max of 5 relevant keywords for each part depending on the length of the part text_data. Ensure the keywords are distinct and not overly repetitive.
     visual_cue: Description of the scene that aligns with the text (consider specifying a style: e.g., minimalist, real footage, etc.).
     text_overlay (optional): Use only when necessary to highlight important points, such as list items (e.g., "Lagos" in "Top Ten Cities to Visit").
     transition: Description of the transition between scenes. Consider using consistent transitions (e.g., all fades, all slides) unless variation is necessary for flow.
@@ -24,6 +24,8 @@ def process_user_input(title, script_type, additional_notes, duration_minutes, t
     The video_tags section must include up to 3 relevant and specific tags.
 
     Ensure the response is in valid JSON format without any extra text outside the JSON object.
+    The first part should be the introduction to the video something welcoming and valid 
+    the keywords should be words that can easily be found
 
     Example Response:
     json
@@ -36,7 +38,7 @@ def process_user_input(title, script_type, additional_notes, duration_minutes, t
     "visual_style": "Real-life footage with subtle animations",
     "parts": [
         {{
-        "text_data": "I hate how I can’t let go of past mistakes. They linger in my mind and hold me back.",
+        "text_data": "Hello welcome today here are the Top things i hate about myself.",
         "video_keywords": ["regret", "mistakes", "self-doubt"],
         "visual_cue": "A person gazing at a mirror with a disappointed expression, reflecting on past mistakes.",
         "text_overlay": "I can't let go of past mistakes",
@@ -75,6 +77,8 @@ def process_user_input(title, script_type, additional_notes, duration_minutes, t
     Transitions should generally be consistent across the video unless there's a narrative reason to vary them.
     Call to action (cta) can be used in any part, not just at the end of the video but shouldn't be too many.
     """
+
+    print(text_prompt)
 
     print("\nSimulating OpenAI API Request...")
     for _ in tqdm(range(10), desc="Generating AI Script", unit="step"):

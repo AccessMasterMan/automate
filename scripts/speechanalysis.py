@@ -3,7 +3,6 @@ import json
 from tqdm import tqdm
 import assemblyai as aai
 
-# Set AssemblyAI API key
 aai.settings.api_key = "f35f8619ff924afeace793906eff2327"  # Replace with your AssemblyAI API key
 
 # Define paths
@@ -41,49 +40,52 @@ def analyze_speech_with_assemblyai(project_name):
     if len(audio_files) != len(parts):
         raise ValueError("The number of audio files does not match the number of parts in the engine data.")
 
-    # Process each audio file
-    for part_index, part in enumerate(tqdm(parts, desc="Processing Parts", unit="part")):
-        audio_path = audio_files[part_index]  # Map the current part to its corresponding audio file
+    # Process each audio file with a single progress bar
+    with tqdm(total=len(parts), desc="Analyzing your audio", unit="file") as progress_bar:
+        for part_index, part in enumerate(parts):
+            audio_path = audio_files[part_index]  # Map the current part to its corresponding audio file
 
-        # Configure AssemblyAI transcription with auto_highlights enabled
-        config = aai.TranscriptionConfig(auto_highlights=True)
+            # Transcribe the audio file
+            transcriber = aai.Transcriber()
+            transcript = transcriber.transcribe(audio_path)
 
-        # Transcribe the audio file
-        transcript = aai.Transcriber().transcribe(audio_path, config)
+            # Check for transcription errors
+            if transcript.status == aai.TranscriptStatus.error:
+                raise RuntimeError(f"Transcription failed for audio file {audio_path}: {transcript.error}")
 
-        keywords = part.get("video_keywords", [])
-        keyword_timestamps = []
+            keywords = part.get("video_keywords", [])
+            keyword_timestamps = []
 
-        # Search for each keyword in the transcription highlights
-        for keyword in keywords:
-            found = False
-            for result in transcript.auto_highlights.results:
-                if result.text.lower() == keyword.lower():
-                    found = True
-                    for timestamp in result.timestamps:
-                        start_time = timestamp.start / 1000  # Convert ms to seconds
-                        end_time = timestamp.end / 1000
+            # Search for each keyword in the transcription words
+            for keyword in keywords:
+                found = False
+                for word_data in transcript.words:
+                    if word_data.text.lower() == keyword.lower():
+                        found = True
                         keyword_timestamps.append({
-                            "keyword": result.text,
-                            "start_time": start_time,
-                            "end_time": end_time
+                            "keyword": keyword,
+                            "start_time": word_data.start / 1000,  # Convert ms to seconds
+                            "end_time": word_data.end / 1000
                         })
+                        break
+                if not found:
+                    keyword_timestamps.append({
+                        "keyword": keyword,
+                        "start_time": None,
+                        "end_time": None
+                    })
 
-            if not found:
-                keyword_timestamps.append({
-                    "keyword": keyword,
-                    "start_time": None,
-                    "end_time": None
-                })
+            # Append part analysis
+            analysis_data["audio_analysis"]["parts"].append({
+                "audio_index": part_index + 1,
+                "parts": [{
+                    "part_index": part_index + 1,
+                    "keywords": keyword_timestamps
+                }]
+            })
 
-        # Append part analysis
-        analysis_data["audio_analysis"]["parts"].append({
-            "audio_index": part_index + 1,
-            "parts": [{
-                "part_index": part_index + 1,
-                "keywords": keyword_timestamps
-            }]
-        })
+            # Update the progress bar
+            progress_bar.update(1)
 
     # Save analysis data
     with open(output_analysis_path, "w") as analysis_file:

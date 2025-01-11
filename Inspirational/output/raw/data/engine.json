@@ -1,0 +1,44 @@
+{
+    "video_title": "10 Things You Should Stop Doing in 2025",
+    "video_length": "1.0 minute",
+    "background_music": "Calm, motivational instrumental music",
+    "narration_tone": "Encouraging and uplifting",
+    "visual_style": "Minimalist animations with occasional real-life footage",
+    "parts": [
+      {
+        "text_data": "Welcome to this video! Today, we’ll explore 10 things you should stop doing in 2025 to create a better version of yourself. Let’s dive in and inspire positive change!",
+        "video_keywords": ["self-improvement", "motivation", "2025 goals"],
+        "visual_cue": "A sunrise over a city, symbolizing a fresh start and new opportunities.",
+        "transition": "fade"
+      },
+      {
+        "text_data": "Stop doubting your abilities. Self-doubt holds you back from achieving your true potential. Remember, you are capable of great things.",
+        "video_keywords": ["self-doubt", "confidence", "potential"],
+        "visual_cue": "A person climbing a mountain with determination, symbolizing overcoming challenges.",
+        "text_overlay": "Believe in your potential",
+        "transition": "slide"
+      },
+      {
+        "text_data": "Stop procrastinating. Time is precious, and delaying important tasks only increases stress and anxiety. Start today, no matter how small.",
+        "video_keywords": ["procrastination", "time management", "action"],
+        "visual_cue": "An animated clock ticking while someone starts working on a task.",
+        "transition": "zoom"
+      },
+      {
+        "text_data": "Stop comparing yourself to others. Everyone’s journey is unique. Focus on your own growth and celebrate your progress.",
+        "video_keywords": ["comparison", "self-growth", "unique journey"],
+        "visual_cue": "Split screen: one side shows a person running their own race, the other side shows a crowd running different paths.",
+        "text_overlay": "Your journey is unique",
+        "transition": "crossfade"
+      },
+      {
+        "text_data": "Stop neglecting your health. Physical and mental wellness are the foundations of a fulfilling life. Take care of yourself daily.",
+        "video_keywords": ["health", "wellness", "self-care"],
+        "visual_cue": "A person meditating in a serene park, radiating calm and focus.",
+        "transition": "fade",
+        "cta": "Share one small step you’ll take for your health in the comments!"
+      }
+    ],
+    "video_tags": ["self-improvement", "motivational tips", "life goals"]
+  }
+  
